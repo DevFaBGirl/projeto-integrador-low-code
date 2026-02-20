@@ -4,12 +4,12 @@
 ⚠️(Falta descrever o tema escolhido pelo grupo, ainda em definição)
 
 ## Integrantes
-- Giovanna Alves Galichi
-- Fabiana Balduina Freitas Silva
-- Matheus Batista Lopes
 - Estefano Deimis Martins
-- Vinicius Lourenco Martins
+- Fabiana Balduina Freitas Silva
+- Giovanna Alves Galichi
 - Leonardo Santos De Oliveira
+- Matheus Batista Lopes
+- Vinicius Lourenco Martinsa
 
 ## Objetivo da Análise
 ⚠️(Falta descrever brevemente o que o grupo pretende analisar e responder com os dados)
@@ -21,8 +21,10 @@
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
 | Criação do repositório | Fabiana | ✅ Concluído |
+Criação do README | Fabiana | ✅ Concluído |
 | Definição da base de dados | A definir | 🔄 Em andamento |
-| Criação do README | A definir | 🔄 Em andamento |
+| Descrever brevemente o contexto | A definir | 🔄 Em andamento |
+| Descrever brevemente o objetivo da análise |A definir | 🔄 Em andamento |
 | Ideia inicial do dashboard | A definir | ⏳ Pendente |
 
 ## Ideia Inicial do Dashboard
