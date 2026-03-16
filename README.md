@@ -45,10 +45,10 @@
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
 | Criação do repositório | Fabiana | ✅ Concluído |
-Criação do README | Fabiana | ✅ Concluído |
-| Definição da base de dados | A definir | ✅ Concluído |
-| Descrever brevemente o contexto | A definir | ✅ Concluído |
-| Descrever brevemente o objetivo da análise |A definir | ✅ Concluído |
+| Criação do README | Fabiana | ✅ Concluído |
+| Definição da base de dados | Giovanna | ✅ Concluído |
+| Descrever brevemente o contexto | Estéfano | ✅ Concluído |
+| Descrever brevemente o objetivo da análise | Estéfano | ✅ Concluído |
 | Ideia inicial do dashboard | A definir | ⏳ Pendente |
 
 ## Ideia Inicial do Dashboard
