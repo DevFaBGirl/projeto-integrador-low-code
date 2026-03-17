@@ -23,23 +23,6 @@
 
 <p>Portanto, discutir a saúde mental nos dias atuais é essencial para compreender os desafios enfrentados pelos trabalhadores e desenvolver estratégias que promovam o bem-estar. Iniciativas de conscientização, políticas organizacionais de apoio psicológico e ambientes de trabalho mais empáticos são passos importantes para garantir que os profissionais possam desempenhar suas funções de forma saudável e sustentável.</p>
 
-
-## Planejamento do Dashboard
-<h2>1 - Identificar a proporção de profissionais que já enfrentaram problemas de saúde mental </h2>
-<p>Analisar quantos entrevistados relatam já ter tido algum problema de saúde mental, permitindo compreender a dimensão desse tema dentro do setor de tecnologia.</p>
-
-<h2>2 - Analisar o acesso ao tratamento psicológico</h2>
-<p>Verificar quantos profissionais tiveram acesso a tratamento psicológico ou psiquiátrico e quantos não buscaram ajuda, identificando possíveis barreiras para o acesso ao cuidado.</p>
-
-<h2>3 - Avaliar o apoio das empresas em relação à saúde mental</h2>
-<p>Investigar se as empresas oferecem benefícios ou programas voltados à saúde mental e como os colaboradores percebem esse suporte dentro do ambiente de trabalho.</p>
-
-<h2>4 - Verificar o impacto da saúde mental no desempenho profissional</h2>
-<p>Analisar se os entrevistados acreditam que problemas de saúde mental afetam sua produtividade ou desempenho no trabalho.</p>
-
-<h2>5 - Avaliar o nível de abertura para discutir saúde mental no ambiente de trabalho</h2>
-<p>Investigar se os profissionais se sentem confortáveis em conversar sobre problemas de saúde mental com colegas ou supervisores.</p>
-
 ## Base de Dados
 <h3>Fonte de dados foi coletada no site <a href="https://www.kaggle.com/code/chaitanya99/mental-health-in-tech-survey-eda" target="_blank" rel="author">Kaggle</a>
 
@@ -55,3 +38,19 @@
 
 ## Ideia Inicial do Dashboard
 ⚠️(Falta descrever como o grupo imagina o projeto/dashboard, por exemplo: quais gráficos, indicadores ou visualizações pretendem criar/trabalhar)
+
+<h2>1 - Identificar a proporção de profissionais que já enfrentaram problemas de saúde mental </h2>
+<p>Analisar quantos entrevistados relatam já ter tido algum problema de saúde mental, permitindo compreender a dimensão desse tema dentro do setor de tecnologia.</p>
+
+<h2>2 - Analisar o acesso ao tratamento psicológico</h2>
+<p>Verificar quantos profissionais tiveram acesso a tratamento psicológico ou psiquiátrico e quantos não buscaram ajuda, identificando possíveis barreiras para o acesso ao cuidado.</p>
+
+<h2>3 - Avaliar o apoio das empresas em relação à saúde mental</h2>
+<p>Investigar se as empresas oferecem benefícios ou programas voltados à saúde mental e como os colaboradores percebem esse suporte dentro do ambiente de trabalho.</p>
+
+<h2>4 - Verificar o impacto da saúde mental no desempenho profissional</h2>
+<p>Analisar se os entrevistados acreditam que problemas de saúde mental afetam sua produtividade ou desempenho no trabalho.</p>
+
+<h2>5 - Avaliar o nível de abertura para discutir saúde mental no ambiente de trabalho</h2>
+<p>Investigar se os profissionais se sentem confortáveis em conversar sobre problemas de saúde mental com colegas ou supervisores.</p>
+
