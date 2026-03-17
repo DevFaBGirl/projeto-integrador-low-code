@@ -31,7 +31,7 @@
 |--------|-------------|--------|
 | Criação do repositório | Fabiana | ✅ Concluído |
 | Criação do README | Fabiana | ✅ Concluído |
-| Definição da base de dados | Giovanna/Vinicius | ✅ Concluído |
+| Definição da base de dados | Giovanna/Vinicius | ✅ Pendente |
 | Descrever brevemente o contexto | Estéfano | ✅ Concluído |
 | Descrever brevemente o objetivo da análise | Estéfano | ✅ Concluído |
 | Ideia inicial do dashboard | Leonardo | ✅ Concluído |
