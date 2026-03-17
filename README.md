@@ -18,11 +18,13 @@
 
 <p>Com base nessas questões, este projeto utiliza dados da pesquisa Mental Health in Tech Survey, disponibilizada na plataforma Kaggle, que reúne respostas de profissionais da área de tecnologia sobre temas relacionados à saúde mental no ambiente de trabalho. A base de dados contém informações sobre histórico de saúde mental, acesso a tratamento, percepção sobre apoio das empresas e impacto desses fatores na vida profissional.
 
+## Objetivo da Análise
 <p>A análise desses dados permite identificar padrões, tendências e possíveis fatores que influenciam o acesso ao tratamento psicológico e a percepção dos trabalhadores em relação à saúde mental no setor de tecnologia. Dessa forma, o projeto busca contribuir para uma melhor compreensão do tema e destacar a importância de iniciativas que promovam ambientes de trabalho mais saudáveis e conscientes em relação à saúde mental.</p>
 
 <p>Portanto, discutir a saúde mental nos dias atuais é essencial para compreender os desafios enfrentados pelos trabalhadores e desenvolver estratégias que promovam o bem-estar. Iniciativas de conscientização, políticas organizacionais de apoio psicológico e ambientes de trabalho mais empáticos são passos importantes para garantir que os profissionais possam desempenhar suas funções de forma saudável e sustentável.</p>
 
-## Objetivo da Análise
+
+## Planejamento do Dashboard
 <h2>1 - Identificar a proporção de profissionais que já enfrentaram problemas de saúde mental </h2>
 <p>Analisar quantos entrevistados relatam já ter tido algum problema de saúde mental, permitindo compreender a dimensão desse tema dentro do setor de tecnologia.</p>
 
@@ -46,10 +48,10 @@
 |--------|-------------|--------|
 | Criação do repositório | Fabiana | ✅ Concluído |
 | Criação do README | Fabiana | ✅ Concluído |
-| Definição da base de dados | Giovanna | ✅ Concluído |
+| Definição da base de dados | Giovanna/Vinicius | ✅ Concluído |
 | Descrever brevemente o contexto | Estéfano | ✅ Concluído |
 | Descrever brevemente o objetivo da análise | Estéfano | ✅ Concluído |
-| Ideia inicial do dashboard | A definir | ⏳ Pendente |
+| Ideia inicial do dashboard | Leonardo | ✅ Concluído |
 
 ## Ideia Inicial do Dashboard
 ⚠️(Falta descrever como o grupo imagina o projeto/dashboard, por exemplo: quais gráficos, indicadores ou visualizações pretendem criar/trabalhar)
