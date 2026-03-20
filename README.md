@@ -26,6 +26,22 @@
 ## Base de Dados
 <h3>Fonte de dados foi coletada no site <a href="https://www.kaggle.com/code/chaitanya99/mental-health-in-tech-survey-eda" target="_blank" rel="author">Kaggle</a>
 
+## Processamento de Dados (ETL)
+<p>Para garantir a qualidade da análise, os dados brutos passaram por um processo de <strong>ETL (Extract, Transform, Load)</strong> utilizando a biblioteca Pandas em Python:</p>
+
+<ul>
+    <li><strong>Extração:</strong> Os dados foram carregados diretamente do arquivo original <code>survey.csv</code>.</li>
+    <li><strong>Transformação:</strong>
+        <ul>
+            <li><strong>Tradução:</strong> Colunas e respostas (como "Yes", "No", "Often") foram traduzidas para o português para facilitar a visualização no dashboard.</li>
+            <li><strong>Limpeza de Outliers:</strong> Filtramos a coluna de idade para manter apenas registros entre 18 e 120 anos, eliminando dados inconsistentes.</li>
+            <li><strong>Tratamento de Nulos:</strong> Valores ausentes foram preenchidos com o termo "Sem Informações" para evitar distorções estatísticas.</li>
+            <li><strong>Padronização:</strong> Formatação da coluna de data e ajuste na categoria de quantidade de funcionários para evitar erros de interpretação por ferramentas de BI.</li>
+        </ul>
+    </li>
+    <li><strong>Carga:</strong> O resultado final foi exportado para o arquivo <code>survey_Dados_Tratados.csv</code>, estruturado e pronto para consumo.</li>
+</ul>
+
 ## Planejamento das Tarefas
 | Tarefa | Responsável | Status |
 |--------|-------------|--------|
