@@ -53,20 +53,34 @@
 | Ideia inicial do dashboard | Leonardo | ✅ Concluído |
 
 ## Ideia Inicial do Dashboard
-⚠️(Falta descrever como o grupo imagina o projeto/dashboard, por exemplo: quais gráficos, indicadores ou visualizações pretendem criar/trabalhar)
+<p>O dashboard foi desenvolvido utilizando Streamlit, permitindo a visualização interativa dos dados diretamente no navegador.</p>
 
-<h2>1 - Identificar a proporção de profissionais que já enfrentaram problemas de saúde mental </h2>
-<p>Analisar quantos entrevistados relatam já ter tido algum problema de saúde mental, permitindo compreender a dimensão desse tema dentro do setor de tecnologia.</p>
+<h2>📈 Indicadores e Visualizações</h2>
 
-<h2>2 - Analisar o acesso ao tratamento psicológico</h2>
-<p>Verificar quantos profissionais tiveram acesso a tratamento psicológico ou psiquiátrico e quantos não buscaram ajuda, identificando possíveis barreiras para o acesso ao cuidado.</p>
+<h3>1. Proporção de profissionais que buscaram tratamento</h3>
+<p>Gráfico de barras que apresenta a distribuição entre profissionais que buscaram e não buscaram tratamento psicológico.</p>
 
-<h2>3 - Avaliar o apoio das empresas em relação à saúde mental</h2>
-<p>Investigar se as empresas oferecem benefícios ou programas voltados à saúde mental e como os colaboradores percebem esse suporte dentro do ambiente de trabalho.</p>
+<h3>2. Impacto da saúde mental no desempenho profissional</h3>
+<p>Visualização que demonstra como os entrevistados percebem o impacto de problemas de saúde mental no trabalho.</p>
 
-<h2>4 - Verificar o impacto da saúde mental no desempenho profissional</h2>
-<p>Analisar se os entrevistados acreditam que problemas de saúde mental afetam sua produtividade ou desempenho no trabalho.</p>
+<h3>3. Distribuição por gênero dos profissionais que buscaram tratamento</h3>
+<p>Comparativo entre gêneros para identificar padrões de busca por apoio psicológico.</p>
 
-<h2>5 - Avaliar o nível de abertura para discutir saúde mental no ambiente de trabalho</h2>
-<p>Investigar se os profissionais se sentem confortáveis em conversar sobre problemas de saúde mental com colegas ou supervisores.</p>
+<h2>4. Relação entre benefícios e impacto no trabalho</h2>
+<p>Mapa de calor (heatmap) que cruza:</p>
+
+<ul>
+    <li>•	Benefícios oferecidos pelas empresas;</li>
+    <li>•	Impacto percebido no desempenho.</li>
+</ul>
+
+<p>Permitindo identificar possíveis correlações entre suporte organizacional e bem-estar.</p>
+
+<h2>📊 Indicadores Sintéticos</h2>
+<ul>
+    <li>•	Percentual de profissionais que buscaram tratamento;</li>
+    <li>•	Percentual de profissionais que relatam impacto no trabalho;</li>
+    <li>•	Percentual com histórico familiar de doenças mentais.</li>
+</ul>
+
 
