@@ -70,17 +70,17 @@
 <p>Mapa de calor (heatmap) que cruza:</p>
 
 <ul>
-    <li>•	Benefícios oferecidos pelas empresas;</li>
-    <li>•	Impacto percebido no desempenho.</li>
+    <li>Benefícios oferecidos pelas empresas;</li>
+    <li>Impacto percebido no desempenho.</li>
 </ul>
 
 <p>Permitindo identificar possíveis correlações entre suporte organizacional e bem-estar.</p>
 
 <h2>📊 Indicadores Sintéticos</h2>
 <ul>
-    <li>•	Percentual de profissionais que buscaram tratamento;</li>
-    <li>•	Percentual de profissionais que relatam impacto no trabalho;</li>
-    <li>•	Percentual com histórico familiar de doenças mentais.</li>
+    <li>Percentual de profissionais que buscaram tratamento;</li>
+    <li>Percentual de profissionais que relatam impacto no trabalho;</li>
+    <li>Percentual com histórico familiar de doenças mentais.</li>
 </ul>
 
 
