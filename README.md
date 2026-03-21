@@ -66,7 +66,7 @@
 <h3>3. Distribuição por gênero dos profissionais que buscaram tratamento</h3>
 <p>Comparativo entre gêneros para identificar padrões de busca por apoio psicológico.</p>
 
-<h2>4. Relação entre benefícios e impacto no trabalho</h2>
+<h3>4. Relação entre benefícios e impacto no trabalho</h3>
 <p>Mapa de calor (heatmap) que cruza:</p>
 
 <ul>
