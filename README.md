@@ -57,8 +57,6 @@
 
 <p>O conjunto de gráficos visa proporcionar entendimento e criar relações entre os fatores apontados no banco de dados. Através da análise cruzada das informações, é possível identificar associações entre a adoção de programas de bem-estar, a busca por tratamento, o impacto no trabalho, a criação de um ambiente confortável para discussão de problemas e os receios que os profissionais têm em comentar sobre sua saúde mental.</p>
 
-<p>O dashboard foi construído de modo interativo, podendo ser filtrado por gênero, tipo de trabalho (remoto ou não) e condição de contratação (autônomo ou não). Ele está dividido em páginas navegáveis, cada uma responsável por apresentar um insight específico sobre uma das características analisadas.</p>
-
 <h2>📈 Indicadores e Visualizações</h2>
 
 <p>O dashboard está organizado em páginas temáticas, permitindo a análise estruturada das relações entre suporte organizacional, comportamento dos profissionais, cultura no ambiente de trabalho e bem-estar.</p>
