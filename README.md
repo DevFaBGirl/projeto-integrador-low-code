@@ -80,8 +80,6 @@
 
 <p>Permite compreender a dimensão do problema e o comportamento geral dos profissionais em relação à saúde mental.</p>
 
-<hr>
-
 <h3>🏢 2. Empresa & Suporte</h3>
 
 <p><b>Objetivo:</b> Avaliar como o suporte organizacional influencia o comportamento e o bem-estar dos profissionais.</p>
@@ -101,8 +99,6 @@
 
 <p>Permite identificar se empresas com maior suporte organizacional estão associadas a uma maior busca por tratamento e a um menor impacto da saúde mental no desempenho.</p>
 
-<hr>
-
 <h3>🧠 3. Ambiente & Cultura</h3>
 
 <p><b>Objetivo:</b> Compreender como o suporte organizacional influencia a criação de um ambiente seguro para discussão de saúde mental.</p>
@@ -119,8 +115,6 @@
 </ul>
 
 <p>Permite avaliar se o suporte organizacional contribui para um ambiente mais seguro e aberto ao diálogo.</p>
-
-<hr>
 
 <h3>⚠️ 4. Medo & Carreira</h3>
 
@@ -139,8 +133,6 @@
 </ul>
 
 <p>Permite identificar barreiras culturais e sociais que impactam a busca por ajuda e a comunicação no ambiente profissional.</p>
-
-<hr>
 
 <h2>📊 Indicadores Sintéticos</h2>
 
