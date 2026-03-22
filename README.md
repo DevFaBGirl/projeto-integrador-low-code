@@ -53,34 +53,103 @@
 | Ideia inicial do dashboard | Leonardo | ✅ Concluído |
 
 ## Ideia Inicial do Dashboard
-<p>O dashboard foi desenvolvido utilizando Streamlit, permitindo a visualização interativa dos dados diretamente no navegador.</p>
+<p>O dashboard foi desenvolvido utilizando o Pandas para tratamento e geração de indicadores, Plotly Express para geração gráfica e Streamlit, permitindo a visualização interativa dos dados diretamente no navegador.</p>
+
+<p>O conjunto de gráficos visa proporcionar entendimento e criar relações entre os fatores apontados no banco de dados. Através da análise cruzada das informações, é possível identificar associações entre a adoção de programas de bem-estar, a busca por tratamento, o impacto no trabalho, a criação de um ambiente confortável para discussão de problemas e os receios que os profissionais têm em comentar sobre sua saúde mental.</p>
+
+<p>O dashboard foi construído de modo interativo, podendo ser filtrado por gênero, tipo de trabalho (remoto ou não) e condição de contratação (autônomo ou não). Ele está dividido em páginas navegáveis, cada uma responsável por apresentar um insight específico sobre uma das características analisadas.</p>
 
 <h2>📈 Indicadores e Visualizações</h2>
 
-<h3>1. Proporção de profissionais que buscaram tratamento</h3>
-<p>Gráfico de barras que apresenta a distribuição entre profissionais que buscaram e não buscaram tratamento psicológico.</p>
+<p>O dashboard está organizado em páginas temáticas, permitindo a análise estruturada das relações entre suporte organizacional, comportamento dos profissionais, cultura no ambiente de trabalho e bem-estar.</p>
 
-<h3>2. Impacto da saúde mental no desempenho profissional</h3>
-<p>Visualização que demonstra como os entrevistados percebem o impacto de problemas de saúde mental no trabalho.</p>
+<h3>📊 1. Visão Geral</h3>
 
-<h3>3. Distribuição por gênero dos profissionais que buscaram tratamento</h3>
-<p>Comparativo entre gêneros para identificar padrões de busca por apoio psicológico.</p>
+<p><b>Objetivo:</b> Apresentar o panorama geral da saúde mental dos profissionais.</p>
 
-<h3>4. Relação entre benefícios e impacto no trabalho</h3>
-<p>Mapa de calor (heatmap) que cruza:</p>
-
+<p><b>Indicadores:</b></p>
 <ul>
-    <li>Benefícios oferecidos pelas empresas;</li>
-    <li>Impacto percebido no desempenho.</li>
+    <li>Percentual de profissionais que buscaram tratamento;</li>
+    <li>Percentual de profissionais que relatam impacto no trabalho;</li>
+    <li>Score médio de suporte organizacional;</li>
+    <li>Score médio de segurança psicológica.</li>
 </ul>
 
-<p>Permitindo identificar possíveis correlações entre suporte organizacional e bem-estar.</p>
+<p><b>Visualizações:</b></p>
+<ul>
+    <li>Gráfico de barras com a distribuição de profissionais que buscaram tratamento.</li>
+</ul>
+
+<p>Permite compreender a dimensão do problema e o comportamento geral dos profissionais em relação à saúde mental.</p>
+
+<hr>
+
+<h3>🏢 2. Empresa & Suporte</h3>
+
+<p><b>Objetivo:</b> Avaliar como o suporte organizacional influencia o comportamento e o bem-estar dos profissionais.</p>
+
+<p><b>Indicadores:</b></p>
+<ul>
+    <li>Score médio de suporte organizacional;</li>
+    <li>Distribuição do suporte em relação à busca por tratamento.</li>
+</ul>
+
+<p><b>Visualizações:</b></p>
+<ul>
+    <li>Mapa de calor (heatmap) relacionando fatores de suporte da empresa com a busca por tratamento;</li>
+    <li>Boxplot com a distribuição do score de suporte entre profissionais que buscaram ou não tratamento;</li>
+    <li>Mapa de calor (heatmap) relacionando suporte organizacional e impacto no trabalho.</li>
+</ul>
+
+<p>Permite identificar se empresas com maior suporte organizacional estão associadas a uma maior busca por tratamento e a um menor impacto da saúde mental no desempenho.</p>
+
+<hr>
+
+<h3>🧠 3. Ambiente & Cultura</h3>
+
+<p><b>Objetivo:</b> Compreender como o suporte organizacional influencia a criação de um ambiente seguro para discussão de saúde mental.</p>
+
+<p><b>Indicadores:</b></p>
+<ul>
+    <li>Nível de abertura para discussão com colegas;</li>
+    <li>Nível de abertura para discussão com supervisores.</li>
+</ul>
+
+<p><b>Visualizações:</b></p>
+<ul>
+    <li>Mapa de calor (heatmap) relacionando fatores de suporte da empresa com a disposição em discutir problemas de saúde mental.</li>
+</ul>
+
+<p>Permite avaliar se o suporte organizacional contribui para um ambiente mais seguro e aberto ao diálogo.</p>
+
+<hr>
+
+<h3>⚠️ 4. Medo & Carreira</h3>
+
+<p><b>Objetivo:</b> Analisar como o medo e a percepção de consequências negativas impactam o comportamento dos profissionais.</p>
+
+<p><b>Indicadores:</b></p>
+<ul>
+    <li>Percepção de consequências negativas ao discutir saúde mental;</li>
+    <li>Disposição em abordar saúde mental em entrevistas.</li>
+</ul>
+
+<p><b>Visualizações:</b></p>
+<ul>
+    <li>Mapa de calor (heatmap) relacionando medo de consequências e busca por tratamento;</li>
+    <li>Mapa de calor (heatmap) relacionando suporte organizacional e disposição em abordar saúde mental em entrevistas.</li>
+</ul>
+
+<p>Permite identificar barreiras culturais e sociais que impactam a busca por ajuda e a comunicação no ambiente profissional.</p>
+
+<hr>
 
 <h2>📊 Indicadores Sintéticos</h2>
+
 <ul>
     <li>Percentual de profissionais que buscaram tratamento;</li>
     <li>Percentual de profissionais que relatam impacto no trabalho;</li>
     <li>Percentual com histórico familiar de doenças mentais.</li>
 </ul>
 
-
+<p>Esses indicadores fornecem uma visão consolidada da situação da saúde mental no ambiente de trabalho, permitindo análises comparativas e identificação de padrões.</p>
