@@ -163,6 +163,6 @@
 | 07/03/2026 | ETL: Extração e carregamento dos dados (survey.csv) | Giovanna e Vinicius | ✅ Concluído |
 | 10/03/2026 | ETL: Transformação > tradução, limpeza e padronização dos dados | Giovanna e Vinicius | ✅ Concluído |
 | 13/03/2026 | Geração do arquivo tratado (survey_Dados_Tratados.csv) | Giovanna e Vinicius | ✅ Concluído |
-| 15/03/2026 | Atualização final do README | Fabiana | ✅ Concluído |
-| 17/03/2026 | Revisão geral do projeto e validação das entregas | Todos | ✅ Concluído |
+| 18/03/2026 | Atualização final do README | Fabiana | ✅ Concluído |
+| 20/03/2026 | Revisão geral do projeto e validação das entregas | Todos | ✅ Concluído |
 | 23/03/2026 | Entrega final: Primeira Etapa do Projeto Integrador | Fabiana | ✅ Concluído |
