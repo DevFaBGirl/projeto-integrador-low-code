@@ -42,16 +42,6 @@
     <li><strong>Carga:</strong> O resultado final foi exportado para o arquivo <code>survey_Dados_Tratados.csv</code>, estruturado e pronto para consumo.</li>
 </ul>
 
-## Planejamento das Tarefas
-| Tarefa | Responsável | Status |
-|--------|-------------|--------|
-| Criação do repositório | Fabiana | ✅ Concluído |
-| Criação do README | Fabiana | ✅ Concluído |
-| Definição da base de dados | Giovanna/Vinicius | ✅ Concluído |
-| Descrever brevemente o contexto | Estéfano | ✅ Concluído |
-| Descrever brevemente o objetivo da análise | Estéfano | ✅ Concluído |
-| Ideia inicial do dashboard | Leonardo | ✅ Concluído |
-
 ## Ideia Inicial do Dashboard
 <p>O dashboard foi desenvolvido utilizando o Pandas para tratamento e geração de indicadores, Plotly Express para geração gráfica e Streamlit, permitindo a visualização interativa dos dados diretamente no navegador.</p>
 
@@ -143,3 +133,13 @@
 </ul>
 
 <p>Esses indicadores fornecem uma visão consolidada da situação da saúde mental no ambiente de trabalho, permitindo análises comparativas e identificação de padrões.</p>
+
+## Planejamento das Tarefas
+| Tarefa | Responsável | Status |
+|--------|-------------|--------|
+| Criação do repositório | Fabiana | ✅ Concluído |
+| Criação do README | Fabiana | ✅ Concluído |
+| Definição da base de dados | Giovanna/Vinicius | ✅ Concluído |
+| Descrever brevemente o contexto | Estéfano | ✅ Concluído |
+| Descrever brevemente o objetivo da análise | Estéfano | ✅ Concluído |
+| Ideia inicial do dashboard | Leonardo | ✅ Concluído |
