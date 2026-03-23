@@ -51,7 +51,7 @@
 
 <p>O dashboard está organizado em páginas temáticas, permitindo a análise estruturada das relações entre suporte organizacional, comportamento dos profissionais, cultura no ambiente de trabalho e bem-estar.</p>
 
-<h3>📊 1. Visão Geral</h3>
+<h3> 1. Visão Geral</h3>
 
 <p><b>Objetivo:</b> Apresentar o panorama geral da saúde mental dos profissionais.</p>
 
@@ -70,7 +70,7 @@
 
 <p>Permite compreender a dimensão do problema e o comportamento geral dos profissionais em relação à saúde mental.</p>
 
-<h3>🏢 2. Empresa & Suporte</h3>
+<h3> 2. Empresa & Suporte</h3>
 
 <p><b>Objetivo:</b> Avaliar como o suporte organizacional influencia o comportamento e o bem-estar dos profissionais.</p>
 
@@ -89,7 +89,7 @@
 
 <p>Permite identificar se empresas com maior suporte organizacional estão associadas a uma maior busca por tratamento e a um menor impacto da saúde mental no desempenho.</p>
 
-<h3>🧠 3. Ambiente & Cultura</h3>
+<h3> 3. Ambiente & Cultura</h3>
 
 <p><b>Objetivo:</b> Compreender como o suporte organizacional influencia a criação de um ambiente seguro para discussão de saúde mental.</p>
 
@@ -106,7 +106,7 @@
 
 <p>Permite avaliar se o suporte organizacional contribui para um ambiente mais seguro e aberto ao diálogo.</p>
 
-<h3>⚠️ 4. Medo & Carreira</h3>
+<h3> 4. Medo & Carreira</h3>
 
 <p><b>Objetivo:</b> Analisar como o medo e a percepção de consequências negativas impactam o comportamento dos profissionais.</p>
 
@@ -124,7 +124,7 @@
 
 <p>Permite identificar barreiras culturais e sociais que impactam a busca por ajuda e a comunicação no ambiente profissional.</p>
 
-<h2>📊 Indicadores Sintéticos</h2>
+<h2> Indicadores Sintéticos</h2>
 
 <ul>
     <li>Percentual de profissionais que buscaram tratamento;</li>
@@ -135,11 +135,34 @@
 <p>Esses indicadores fornecem uma visão consolidada da situação da saúde mental no ambiente de trabalho, permitindo análises comparativas e identificação de padrões.</p>
 
 ## Planejamento das Tarefas
-| Tarefa | Responsável | Status |
-|--------|-------------|--------|
-| Criação do repositório | Fabiana | ✅ Concluído |
-| Criação do README | Fabiana | ✅ Concluído |
-| Definição da base de dados | Giovanna/Vinicius | ✅ Concluído |
-| Descrever brevemente o contexto | Estéfano | ✅ Concluído |
-| Descrever brevemente o objetivo da análise | Estéfano | ✅ Concluído |
-| Ideia inicial do dashboard | Leonardo | ✅ Concluído |
+| Tarefa | Responsável 
+|--------|------------
+| Criação do repositório | Fabiana 
+| Criação do README | Fabiana 
+| Definição da base de dados | Fabiana, Giovanna e Vinicius 
+| Descrever brevemente o contexto | Estéfano 
+| Descrever brevemente o objetivo da análise | Estéfano 
+| Ideia inicial do dashboard | Leonardo e Matheus 
+
+
+## 📅 Cronograma de Desenvolvimento
+
+> Período: 20/02/2026 a 20/03/2026 — Primeira Etapa do Projeto Integrador
+
+| Data | Atividade | Responsável(is) | Status |
+|------|-----------|-----------------|--------|
+| 20/02/2026 | Início do projeto: criação do repositório no GitHub com README inicial | Fabiana | ✅ Concluído |
+| 21/02/2026 | Inserção dos integrantes como colaboradores no repositório | Fabiana | ✅ Concluído |
+| 22/02/2026 | Estruturação inicial do repositório e organização de pastas | Fabiana | ✅ Concluído |
+| 24/02/2026 | Definição da base de dados (Mental Health in Tech Survey – Kaggle) | Todos  | ✅ Concluído |
+| 25/02/2026 | Descrição do contexto do projeto | Estéfano | ✅ Concluído |
+| 26/02/2026 | Descrição do objetivo da análise | Estéfano | ✅ Concluído |
+| 27/02/2026 | Planejamento das tarefas, divisão por integrante | Todos | ✅ Concluído |
+| 01/03/2026 | Definição das visualizações e métricas do dashboard | Leonardo e Matheus | ✅ Concluído |
+| 03/03/2026 | Ideia inicial do dashboard, estrutura de páginas e indicadores | Leonardo e Matheus | ✅ Concluído |
+| 07/03/2026 | ETL: Extração e carregamento dos dados (survey.csv) | Giovanna e Vinicius | ✅ Concluído |
+| 10/03/2026 | ETL: Transformação > tradução, limpeza e padronização dos dados | Giovanna e Vinicius | ✅ Concluído |
+| 13/03/2026 | Geração do arquivo tratado (survey_Dados_Tratados.csv) | Giovanna e Vinicius | ✅ Concluído |
+| 15/03/2026 | Atualização final do README | Fabiana | ✅ Concluído |
+| 17/03/2026 | Revisão geral do projeto e validação das entregas | Todos | ✅ Concluído |
+| 23/03/2026 | Entrega final: Primeira Etapa do Projeto Integrador | Fabiana | ✅ Concluído |
