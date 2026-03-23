@@ -158,10 +158,10 @@
 | 25/02/2026 | Descrição do contexto do projeto | Estéfano | ✅ Concluído |
 | 26/02/2026 | Descrição do objetivo da análise | Estéfano | ✅ Concluído |
 | 27/02/2026 | Planejamento das tarefas, divisão por integrante | Todos | ✅ Concluído |
-| 01/03/2026 | Definição das visualizações e métricas do dashboard | Leonardo e Matheus | ✅ Concluído |
-| 03/03/2026 | Ideia inicial do dashboard, estrutura de páginas e indicadores | Leonardo e Matheus | ✅ Concluído |
-| 07/03/2026 | ETL: Extração e carregamento dos dados (survey.csv) | Giovanna e Vinicius | ✅ Concluído |
-| 10/03/2026 | ETL: Transformação > tradução, limpeza e padronização dos dados | Giovanna e Vinicius | ✅ Concluído |
+| 01/03/2026 | ETL: Extração e carregamento dos dados (survey.csv) | Giovanna e Vinicius | ✅ Concluído |
+| 03/03/2026 | ETL: Transformação > tradução, limpeza e padronização dos dados | Giovanna e Vinicius | ✅ Concluído |
+| 07/03/2026 | Ideia inicial do dashboard, estrutura de páginas e indicadores | Leonardo e Matheus | ✅ Concluído |
+| 10/03/2026 | Definição das visualizações e métricas do dashboard | Leonardo e Matheus | ✅ Concluído |
 | 13/03/2026 | Geração do arquivo tratado (survey_Dados_Tratados.csv) | Giovanna e Vinicius | ✅ Concluído |
 | 18/03/2026 | Atualização final do README | Fabiana | ✅ Concluído |
 | 20/03/2026 | Revisão geral do projeto e validação das entregas | Todos | ✅ Concluído |
