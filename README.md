@@ -139,7 +139,7 @@
 |--------|------------
 | Criação do repositório | Fabiana 
 | Criação do README | Fabiana 
-| Definição da base de dados | Fabiana, Giovanna e Vinicius 
+| Definição da base de dados | Todos 
 | Descrever brevemente o contexto | Estéfano 
 | Descrever brevemente o objetivo da análise | Estéfano 
 | Ideia inicial do dashboard | Leonardo e Matheus 
