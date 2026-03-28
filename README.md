@@ -6,10 +6,10 @@
 ## Integrantes
 - Estefano Deimis Martins
 - Fabiana Balduina Freitas Silva
-- Giovanna Alves Galichi
+- Giovanna Alves Galichio
 - Leonardo Santos De Oliveira
 - Matheus Batista Lopes
-- Vinicius Lourenco Martinsa
+- Vinicius Lourenco Martins
 
 ## Descrição sobre o Projeto
 <p>A saúde mental tem se tornado um tema cada vez mais relevante na sociedade contemporânea, especialmente em ambientes de trabalho altamente exigentes, como o setor de tecnologia. Com o avanço da digitalização, a pressão por produtividade, prazos curtos e a constante necessidade de atualização profissional têm contribuído para o aumento do estresse, da ansiedade e de outros problemas psicológicos entre trabalhadores. Nesse contexto, compreender e discutir a saúde mental tornou-se essencial para garantir qualidade de vida, bem-estar e desempenho profissional.</p>
