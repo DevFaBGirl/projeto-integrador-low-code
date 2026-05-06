@@ -16,8 +16,9 @@ def load_data():
     return pd.read_csv(path, sep=";")
 
 df = load_data()
+
 # =========================
-# NORMALIZAÇÃO FORTE (CRÍTICO)
+# NORMALIZAÇÃO FORTE
 # =========================
 def normalize_text(col):
     return col.astype(str).str.strip().str.lower()
@@ -31,12 +32,7 @@ map_bin = {
 
 df["tratamento_bin"] = df["Tratamento"].map(map_bin)
 
-df["Impacto_Trabalho"] = (
-    df["Impacto_Trabalho"]
-    .astype(str)
-    .str.strip()
-    .str.lower()
-)
+df["Impacto_Trabalho"] = normalize_text(df["Impacto_Trabalho"])
 
 impacto_map = {
     "nunca": 0,
@@ -48,27 +44,24 @@ impacto_map = {
 }
 
 df["impacto_bin"] = df["Impacto_Trabalho"].map(impacto_map)
+
 # =========================
-# CAMADA SEMÂNTICA
+# LABELS
 # =========================
 col_map = {
     "Tratamento": "Buscou tratamento para saúde mental?",
     "Impacto_Trabalho": "Saúde mental impacta o trabalho?",
     "Historico_Familiar": "Possui histórico familiar de doença mental?",
-    
     "Beneficios": "Empresa oferece benefícios de saúde mental?",
     "Opcoes_Cuidado": "Conhece opções de cuidado oferecidas?",
     "Programa_Bem_Estar": "Empresa discute saúde mental em programas?",
     "Busca_Ajuda": "Empresa oferece recursos para buscar ajuda?",
     "Anonimato": "Anonimato é protegido ao buscar tratamento?",
     "Facilidade_Licenca": "Facilidade para tirar licença por saúde mental?",
-    
     "Consequencia_Saude_Mental": "Há consequências negativas ao falar sobre saúde mental?",
     "Consequencia_Saude_Fisica": "Há consequências negativas ao falar sobre saúde física?",
-    
     "Colegas": "Disposição para falar com colegas sobre saúde mental?",
     "Supervisor": "Disposição para falar com supervisor sobre saúde mental?",
-    
     "Entrevista_Saude_Mental": "Falaria sobre saúde mental em entrevista?",
     "Entrevista_Saude_Fisica": "Falaria sobre saúde física em entrevista?"
 }
@@ -87,8 +80,7 @@ cols_empresa = [
 valid_cols_empresa = [c for c in cols_empresa if c in df.columns]
 
 def map_sim_nao(x):
-    x = str(x).strip().lower()
-    return map_bin.get(x, np.nan)
+    return map_bin.get(str(x).strip().lower(), np.nan)
 
 df["score_empresa"] = df[valid_cols_empresa].apply(
     lambda col: col.map(map_sim_nao)
@@ -111,6 +103,14 @@ df["score_psicologico"] = df[valid_cols_psico].apply(
 # =========================
 st.sidebar.header("Filtros")
 
+modo = st.sidebar.radio(
+    "Modo de análise",
+    ["Indicadores relacionais", "Indicadores absolutos"],
+    horizontal=True
+)
+
+modo_relacional = modo == "Indicadores relacionais"
+
 generos = st.sidebar.multiselect(
     "Gênero",
     options=df['Genero'].dropna().unique(),
@@ -120,230 +120,183 @@ generos = st.sidebar.multiselect(
 df = df[df['Genero'].isin(generos)]
 
 # =========================
+# FUNÇÃO HEATMAP (PADRÃO)
+# =========================
+def heatmap_relacao(df, col_x, col_y, titulo=None):
+
+    df_plot = pd.crosstab(
+        df[col_x],
+        df[col_y],
+        normalize='index'
+    )
+
+    fig = px.imshow(
+        df_plot,
+        text_auto=".1%",
+        labels=dict(
+            x=label(col_y),
+            y=label(col_x),
+            color="% dentro do grupo"
+        ),
+        title=titulo
+    )
+
+    fig.update_coloraxes(colorbar_tickformat=".0%")
+
+    return fig
+
+# =========================
 # HEADER
 # =========================
 st.title("Dashboard de Saúde Mental no Trabalho")
 
-pagina = st.radio(
-    "Selecione a página",
-    ["Visão Geral", "Empresa & Suporte", "Ambiente & Cultura", "Medo & Carreira"],
-    horizontal=True
-)
-
 # =========================
-# VISÃO GERAL
+# MODO RELACIONAL
 # =========================
-if pagina == "Visão Geral":
+if modo_relacional:
 
-    st.subheader("Panorama geral da saúde mental")
-
-    col1, col2, col3, col4 = st.columns(4)
-
-    col1.metric("Buscou tratamento (%)", f"{df['tratamento_bin'].mean()*100:.1f}%")
-    col2.metric("Impacto no trabalho (%)", f"{df['impacto_bin'].mean()*100:.1f}%")
-    col3.metric("Score de suporte organizacional", f"{df['score_empresa'].mean():.2f}")
-    col4.metric("Score de segurança psicológica", f"{df['score_psicologico'].mean():.2f}")
-
-    st.markdown("### Distribuição de tratamento")
-
-    st.caption(label("Tratamento"))
-
-    dados = df['Tratamento'].value_counts(normalize=True).reset_index()
-    dados.columns = ['Resposta', 'Percentual']
-
-    dados["Percentual"] = dados["Percentual"] * 100
-
-    fig = px.bar(
-        dados,
-        x='Resposta',
-        y='Percentual',
-        text_auto=".1f",
-        labels={
-            "Resposta": label("Tratamento"),
-            "Percentual": "Percentual (%)"
-        }
+    pagina = st.radio(
+        "Selecione a página",
+        ["Visão Geral", "Empresa & Suporte", "Ambiente & Cultura", "Medo & Carreira"],
+        horizontal=True
     )
 
-    fig.update_yaxes(ticksuffix="%")
+    if pagina == "Visão Geral":
 
-    st.plotly_chart(fig, use_container_width=True)
+        st.subheader("Panorama geral da saúde mental")
 
-# =========================
-# EMPRESA & SUPORTE
-# =========================
-elif pagina == "Empresa & Suporte":
+        col1, col2, col3, col4 = st.columns(4)
 
-    st.subheader("O suporte da empresa influencia a busca por tratamento?")
+        col1.metric("Buscou tratamento (%)", f"{df['tratamento_bin'].mean()*100:.1f}%")
+        col2.metric("Impacto no trabalho (%)", f"{df['impacto_bin'].mean()*100:.1f}%")
+        col3.metric("Score de suporte organizacional", f"{df['score_empresa'].mean():.2f}")
+        col4.metric("Score de segurança psicológica", f"{df['score_psicologico'].mean():.2f}")
 
-    variavel = st.selectbox(
-        "Fator de suporte",
-        valid_cols_empresa,
-        format_func=label
-    )
+        st.caption("Score varia de 0 a 1.")
 
-    st.caption(label(variavel))
+        dados = df['Tratamento'].value_counts(normalize=True).reset_index()
+        dados.columns = ['Resposta', 'Percentual']
+        dados["Percentual"] *= 100
 
-    df_plot = (df.groupby(variavel)["tratamento_bin"].mean().reset_index())
+        fig = px.bar(
+            dados,
+            x='Resposta',
+            y='Percentual',
+            text_auto=".1f",
+            labels={"Percentual": "Percentual (%)"}
+        )
 
-    fig = px.bar(
-        df_plot,
-        x=variavel,
-        y="tratamento_bin",
-        labels={
-            variavel: label(variavel),
-            "tratamento_bin": "% que buscou tratamento"
-        },
-        text_auto=".1%"
-    )
+        fig.update_yaxes(ticksuffix="%")
+        st.plotly_chart(fig, use_container_width=True)
 
-    st.plotly_chart(fig, use_container_width=True)
+    elif pagina == "Empresa & Suporte":
 
-    st.subheader("Distribuição do suporte organizacional")
+        variavel = st.selectbox("Fator de suporte", valid_cols_empresa, format_func=label)
 
-    fig = px.box(
-        df,
-        x="Tratamento",
-        y="score_empresa",
-        labels={
-            "Tratamento": label("Tratamento"),
-            "score_empresa": "Score de suporte organizacional"
-        }
-    )
+        st.plotly_chart(
+            heatmap_relacao(df, variavel, "Tratamento"),
+            use_container_width=True
+        )
 
-    st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(
+            px.box(df, x="Tratamento", y="score_empresa"),
+            use_container_width=True
+        )
 
-    st.subheader("Suporte vs Impacto no trabalho")
-
-    variavel_impacto = st.selectbox(
-        "Fator de suporte (impacto)",
-        valid_cols_empresa,
-        key="impacto",
-        format_func=label
-    )
-
-    df_plot = (
-        df.groupby(variavel_impacto)["impacto_bin"]
-        .mean()
-        .reset_index()
-    )
-
-    fig = px.bar(
-        df_plot,
-        x=variavel_impacto,
-        y="impacto_bin",
-        labels={
-            variavel_impacto: label(variavel_impacto),
-            "impacto_bin": "% com impacto no trabalho"
-        },
-        text_auto=".1%"
-    )
-
-    st.plotly_chart(fig, use_container_width=True)
-# =========================
-# AMBIENTE & CULTURA
-# =========================
-elif pagina == "Ambiente & Cultura":
-
-    st.subheader("O ambiente favorece a abertura para discussão?")
-
-    col1, col2 = st.columns(2)
-
-    col1.metric(
-        "Abertura com colegas",
-        f"{df['Colegas'].apply(map_sim_nao).mean():.2f}"
-    )
-
-    col2.metric(
-        "Abertura com supervisores",
-        f"{df['Supervisor'].apply(map_sim_nao).mean():.2f}"
-    )
-
-    col1, col2 = st.columns(2)
-
-    with col1:
-        variavel_empresa = st.selectbox(
-            "Fator da empresa",
+        variavel_impacto = st.selectbox(
+            "Fator de suporte (impacto)",
             valid_cols_empresa,
+            key="impacto",
             format_func=label
         )
 
-    with col2:
-        variavel_ambiente = st.selectbox(
-            "Tipo de abertura",
-            ["Colegas", "Supervisor"],
-            format_func=label
+        st.plotly_chart(
+            heatmap_relacao(df, variavel_impacto, "Impacto_Trabalho"),
+            use_container_width=True
         )
 
-    df_plot = (
-        df.groupby(variavel_empresa)[variavel_ambiente]
-        .apply(lambda x: x.map(map_sim_nao).mean()*100)
-        .reset_index()
-    )
+        st.markdown("---")
+        st.subheader("Modelo de trabalho")
 
-    fig = px.bar(
-        df_plot,
-        x=variavel_empresa,
-        y=variavel_ambiente,
-        labels={
-            variavel_empresa: label(variavel_empresa),
-            variavel_ambiente: "Nível médio de abertura"
-        },
-        text_auto=".2f"
-    )
+        for (x, y, t) in [
+            ("autônomo", "Impacto_Trabalho", "Autônomo vs Impacto"),
+            ("Trabalho_Remoto", "Impacto_Trabalho", "Remoto vs Impacto"),
+            ("autônomo", "Tratamento", "Autônomo vs Tratamento"),
+            ("Trabalho_Remoto", "Tratamento", "Remoto vs Tratamento"),
+            ("Trabalho_Remoto", "Supervisor", "Remoto vs Supervisor"),
+        ]:
+            if x in df.columns:
+                st.plotly_chart(
+                    heatmap_relacao(df, x, y, t),
+                    use_container_width=True
+                )
 
-    st.plotly_chart(fig, use_container_width=True)
+    elif pagina == "Ambiente & Cultura":
 
-# =========================
-# MEDO & CARREIRA
-# =========================
-elif pagina == "Medo & Carreira":
+        col1, col2 = st.columns(2)
 
-    st.subheader("O medo influencia o comportamento profissional?")
+        col1.metric("Abertura colegas", f"{df['Colegas'].map(map_sim_nao).mean()*100:.1f}%")
+        col2.metric("Abertura supervisor", f"{df['Supervisor'].map(map_sim_nao).mean()*100:.1f}%")
 
-    if "Consequencia_Saude_Mental" in df.columns:
-        df["medo_score"] = df["Consequencia_Saude_Mental"].apply(map_sim_nao)*100
+        col1, col2 = st.columns(2)
 
+        with col1:
+            var_emp = st.selectbox("Empresa", valid_cols_empresa, format_func=label)
+            
+        with col2:
+            var_amb = st.selectbox("Abertura", ["Colegas", "Supervisor"], format_func=label)
 
-    dados = df["Consequencia_Saude_Mental"].value_counts(normalize=True).reset_index()
-    dados.columns = ["Resposta", "Percentual"]
-
-    dados = df.groupby("Consequencia_Saude_Mental")["tratamento_bin"].mean().reset_index()
-
-    fig = px.bar(
-        dados,
-        x="Consequencia_Saude_Mental",
-        y="tratamento_bin",
-        text_auto=".1%",
-        labels={
-            "Consequencia_Saude_Mental": label("Consequencia_Saude_Mental"),
-            "tratamento_bin": "% que buscou tratamento"
-        },
-        title="Medo vs busca por tratamento"
-    )
-
-    st.plotly_chart(fig, use_container_width=True)
-    
-
-    variavel_empresa = st.selectbox(
-        "Fator da empresa",
-        valid_cols_empresa,
-        format_func=label
-    )
-
-    heatmap = pd.crosstab(
-        df[variavel_empresa],
-        df["Entrevista_Saude_Mental"],
-        normalize='index'
-    ) * 100
-
-    fig = px.imshow(
-        heatmap,
-        text_auto=".1f",
-        labels=dict(
-            x=label("Entrevista_Saude_Mental"),
-            y=label(variavel_empresa),
-            color="Percentual (%)"
+        st.plotly_chart(
+            heatmap_relacao(df, var_emp, var_amb),
+            use_container_width=True
         )
-    )
 
-    st.plotly_chart(fig, use_container_width=True)
+    elif pagina == "Medo & Carreira":
+
+        st.plotly_chart(
+            heatmap_relacao(df, "Consequencia_Saude_Mental", "Tratamento"),
+            use_container_width=True
+        )
+
+        var = st.selectbox("Empresa", valid_cols_empresa, format_func=label)
+
+        st.plotly_chart(
+            heatmap_relacao(df, var, "Entrevista_Saude_Mental"),
+            use_container_width=True
+        )
+
+# =========================
+# MODO ABSOLUTO
+# =========================
+else:
+
+    st.subheader("Distribuição Geral (%)")
+
+    colunas = [
+        "Tratamento","Beneficios","Impacto_Trabalho","Historico_Familiar",
+        "Opcoes_Cuidado","Programa_Bem_Estar","Busca_Ajuda","Anonimato",
+        "Facilidade_Licenca","Consequencia_Saude_Mental","Consequencia_Saude_Fisica",
+        "Colegas","Supervisor","Entrevista_Saude_Mental","Entrevista_Saude_Fisica"
+    ]
+
+    for col in colunas:
+
+        if col not in df.columns:
+            continue
+
+        dados = df[col].value_counts(normalize=True).reset_index()
+        dados.columns = [col, "percentual"]
+
+        fig = px.bar(
+            dados,
+            x=col,
+            y="percentual",
+            text_auto=".1%",
+            labels={"percentual": "% do total"}
+        )
+
+        fig.update_yaxes(tickformat=".0%")
+
+        st.markdown("---")
+        st.subheader(label(col))
+        st.plotly_chart(fig, use_container_width=True)

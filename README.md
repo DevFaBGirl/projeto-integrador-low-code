@@ -89,6 +89,28 @@
 
 <p>Permite identificar se empresas com maior suporte organizacional estão associadas a uma maior busca por tratamento e a um menor impacto da saúde mental no desempenho.</p>
 
+<h3>2.1 Modelo de Trabalho</h3>
+
+<p><strong>Objetivo:</strong> Analisar como o tipo de vínculo e o regime de trabalho influenciam o comportamento e o bem-estar dos profissionais.</p>
+
+<p><strong>Indicadores:</strong></p>
+<ul>
+  <li>Impacto da saúde mental no trabalho por tipo de vínculo;</li>
+  <li>Busca por tratamento por tipo de vínculo;</li>
+  <li>Nível de abertura com supervisores por regime de trabalho.</li>
+</ul>
+
+<p><strong>Visualizações:</strong></p>
+<ul>
+  <li>Mapa de calor (heatmap) relacionando trabalho autônomo e impacto no trabalho;</li>
+  <li>Mapa de calor (heatmap) relacionando trabalho remoto e impacto no trabalho;</li>
+  <li>Mapa de calor (heatmap) relacionando trabalho autônomo e busca por tratamento;</li>
+  <li>Mapa de calor (heatmap) relacionando trabalho remoto e busca por tratamento;</li>
+  <li>Mapa de calor (heatmap) relacionando trabalho remoto e abertura com supervisores.</li>
+</ul>
+
+<p>Permite identificar diferenças comportamentais e de bem-estar associadas ao modelo de trabalho, evidenciando possíveis riscos ou vantagens de regimes como trabalho remoto ou autônomo.</p>
+
 <h3> 3. Ambiente & Cultura</h3>
 
 <p><b>Objetivo:</b> Compreender como o suporte organizacional influencia a criação de um ambiente seguro para discussão de saúde mental.</p>
@@ -124,15 +146,25 @@
 
 <p>Permite identificar barreiras culturais e sociais que impactam a busca por ajuda e a comunicação no ambiente profissional.</p>
 
-<h2> Indicadores Sintéticos</h2>
+<h2>Indicadores Absolutos</h2>
 
+<p><strong>Objetivo:</strong> Apresentar a distribuição percentual das principais variáveis do estudo, permitindo uma análise direta da composição da amostra.</p>
+
+<p><strong>Indicadores:</strong></p>
 <ul>
-    <li>Percentual de profissionais que buscaram tratamento;</li>
-    <li>Percentual de profissionais que relatam impacto no trabalho;</li>
-    <li>Percentual com histórico familiar de doenças mentais.</li>
+  <li>Distribuição percentual da busca por tratamento;</li>
+  <li>Distribuição percentual do impacto da saúde mental no trabalho;</li>
+  <li>Distribuição percentual de histórico familiar de doenças mentais;</li>
+  <li>Distribuição dos fatores de suporte organizacional;</li>
+  <li>Distribuição das percepções de consequências e ambiente psicológico.</li>
 </ul>
 
-<p>Esses indicadores fornecem uma visão consolidada da situação da saúde mental no ambiente de trabalho, permitindo análises comparativas e identificação de padrões.</p>
+<p><strong>Visualizações:</strong></p>
+<ul>
+  <li>Gráficos de barras com distribuição percentual por variável;</li>
+</ul>
+
+<p>Esses indicadores permitem compreender a estrutura dos dados e servem como base para interpretação dos relacionamentos apresentados nas demais análises.</p>
 
 ## Planejamento das Tarefas
 | Tarefa | Responsável 
