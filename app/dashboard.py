@@ -3,15 +3,14 @@ import pandas as pd
 import plotly.express as px
 import os
 
-# Configuração inicial da página
+
 st.set_page_config(
     page_title="Dashboard Saúde Mental",
-    page_icon="🧠",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Estilização básica via CSS
+
 st.markdown("""
 <style>
     .main-title {
@@ -28,13 +27,13 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.markdown('<h1 class="main-title">🧠 Dashboard: Saúde Mental na Tecnologia</h1>', unsafe_allow_html=True)
+st.markdown('<h1 class="main-title"> Dashboard: Saúde Mental na Tecnologia</h1>', unsafe_allow_html=True)
 st.markdown('<p class="sub-title">Análise baseada nos dados da pesquisa <i>Mental Health in Tech Survey</i></p>', unsafe_allow_html=True)
 
-# Função para carregar os dados
+
 @st.cache_data
 def load_data():
-    # Tenta caminhos diferentes dependendo de onde o streamlit é executado
+     
     caminhos = [
         '../data/survey_Dados_Tratados.csv',
         'data/survey_Dados_Tratados.csv',
@@ -50,10 +49,10 @@ def load_data():
 
 df = load_data()
 
-# ----------------------------------------
-# 🎯 INDICADORES SINTÉTICOS (Topo)
-# ----------------------------------------
-st.markdown("### 📈 Principais Indicadores")
+
+
+
+st.markdown("###  Principais Indicadores")
 
 col1, col2, col3 = st.columns(3)
 
@@ -67,17 +66,15 @@ col3.metric("Têm Histórico Familiar", f"{historico_pct:.1f}%")
 
 st.divider()
 
-# ----------------------------------------
-# 📑 ESTRUTURA DE ABAS
-# ----------------------------------------
+
+
 tab1, tab2, tab3, tab4 = st.tabs([
-    "📊 Visão Geral", 
-    "🏢 Empresa & Suporte", 
-    "🤝 Ambiente & Cultura", 
-    "😰 Medo & Carreira"
+    " Visão Geral", 
+    " Empresa & Suporte", 
+    " Ambiente & Cultura", 
+    " Medo & Carreira"
 ])
 
-# ---- ABA 1: VISÃO GERAL ----
 with tab1:
     st.header("1. Visão Geral")
     st.markdown("Panorama geral da saúde mental dos profissionais analisados.")
@@ -97,7 +94,7 @@ with tab1:
                             category_orders={"Impacto_Trabalho": ["Nunca", "Raramente", "Às vezes", "Muitas vezes", "Sem Informações"]})
         st.plotly_chart(fig2, use_container_width=True)
 
-# ---- ABA 2: EMPRESA & SUPORTE ----
+
 with tab2:
     st.header("2. Empresa & Suporte")
     st.markdown("Avaliação de como o suporte organizacional influencia o bem-estar e o tratamento.")
@@ -116,7 +113,7 @@ with tab2:
                                   text_auto=True, color_continuous_scale="Teal")
         st.plotly_chart(fig4, use_container_width=True)
 
-# ---- ABA 3: AMBIENTE & CULTURA ----
+
 with tab3:
     st.header("3. Ambiente & Cultura")
     st.markdown("Compreensão do suporte organizacional na criação de um ambiente seguro para o diálogo.")
@@ -127,7 +124,7 @@ with tab3:
                               text_auto=True, color_continuous_scale="Purples")
     st.plotly_chart(fig5, use_container_width=True)
 
-# ---- ABA 4: MEDO & CARREIRA ----
+
 with tab4:
     st.header("4. Medo & Carreira")
     st.markdown("Análise de como o medo de consequências negativas impacta os profissionais.")
